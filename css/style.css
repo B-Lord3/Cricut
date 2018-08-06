@@ -1,0 +1,133 @@
+@charset "UTF-8";
+/* CSS Document */
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*-----BODY -----*/
+body {
+  font-family: 'Ubuntu', sans-serif; }
+  body a {
+    color: #ffffff;
+    text-decoration: none; }
+  body a:hover {
+    text-decoration: none; }
+
+/*----- Wrapper -----*/
+#wrapper, #header {
+  max-width: 1500px;
+  margin: auto; }
+
+/*----- Container -----*/
+#container {
+  width: 100%;
+  overflow: hidden; }
+
+.transition {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background-image: url(../img/ramiro-mendes.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .hero .hero-text {
+    display: flex;
+    color: white;
+    font-size: 3em;
+    position: relative;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 400px;
+    bottom: 100px; }
+    .hero .hero-text .hero-text-elmt span:nth-child(2n+0) {
+      border-bottom: 3px solid #ede232; }
+    .hero .hero-text .hero-text-elmt span:nth-child(2n+1) {
+      border-top: 3px solid #ede232; }
+    .hero .hero-text .hero-text-elmt::after {
+      content: "•";
+      padding: 15px;
+      color: #ede232; }
+    .hero .hero-text .hero-text-elmt:last-child:after {
+      content: none; }
+
+.layer-overlay {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  background-image: linear-gradient(to top, #ab34c1, #9429bf, #7b20bd, #5d19ba, #3316b8);
+  opacity: .5; }
+
+#header {
+  width: 100%;
+  height: auto;
+  display: flex;
+  position: absolute;
+  z-index: 99;
+  padding: 20px 5%; }
+  #header .logo-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    z-index: 1; }
+    #header .logo-container .logo {
+      width: 100px;
+      height: auto;
+      display: block; }
+      #header .logo-container .logo img {
+        width: 100%;
+        height: auto; }
+    #header .logo-container .logo-name span {
+      color: #ffffff; }
+    #header .logo-container .boxIn {
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+      -o-transform: translateY(0px);
+      transform: translateY(0px); }
+    #header .logo-container .boxOut {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+      -moz-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+      -o-transform: translateY(-20px);
+      transform: translateY(-20px);
+      -webkit-transition-delay: 500ms;
+      -moz-transition-delay: 500ms;
+      -ms-transition-delay: 500ms;
+      -o-transition-delay: 500ms;
+      transition-delay: 500ms; }
+  #header .nav-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative; }
+    #header .nav-container .menu {
+      display: inline-block; }
+      #header .nav-container .menu ul {
+        list-style-type: none;
+        display: flex; }
+        #header .nav-container .menu ul li {
+          padding: 20px 10px; }
+          #header .nav-container .menu ul li a::after {
+            display: inline-block;
+            font-size: 80%;
+            font-weight: bold;
+            padding: 0 3px; }
+          #header .nav-container .menu ul li a:hover {
+            color: #ede232; }
+
+/*# sourceMappingURL=style.css.map */

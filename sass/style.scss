@@ -1,0 +1,212 @@
+/* CSS Document */
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*-----BODY -----*/
+body {
+	font-family: 'Ubuntu', sans-serif;
+
+    a {
+    	color: #ffffff;
+    	text-decoration: none;
+    }
+    a:hover {
+    	text-decoration: none;
+    }
+}
+
+/*----- Wrapper -----*/
+#wrapper, #header {
+	max-width: 1500px;
+	margin: auto;
+}
+
+/*----- Container -----*/
+#container {
+	width: 100%;
+	overflow: hidden;
+}
+
+.transition {
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	-ms-transition: 1s;
+	-o-transition: 1s;
+	transition: 1s;
+	
+}
+
+.hero {
+	width: 100%;
+	height: 400px;
+	background-image: url(../img/ramiro-mendes.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+     background-position: center;
+	position: relative;
+
+	.hero-text {
+		display: flex;
+	    color: white;
+	    font-size: 3em;
+	    position: relative;
+	    justify-content: center;
+	    align-items: flex-end;
+	    width: 100%;
+	    height: 400px;
+    	bottom: 100px;
+
+    	.hero-text-elmt {
+
+		    span:nth-child(2n+0) {
+		    	border-bottom: 3px solid #ede232;
+		    }
+
+		    span:nth-child(2n+1) {
+				border-top: 3px solid #ede232;
+			}
+		}
+
+		.hero-text-elmt::after {
+			content: "•";
+		   	padding: 15px;
+		    color: #ede232;
+	    }
+
+		.hero-text-elmt:last-child:after {
+			content: none;
+		}
+
+	}
+}
+
+.layer-overlay {
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	background-image: linear-gradient(to top, #ab34c1, #9429bf, #7b20bd, #5d19ba, #3316b8);
+	opacity: .5;
+}
+
+#header {
+	width: 100%;
+	height: auto;
+	display: flex;
+	position: absolute;
+	z-index: 99;
+	padding: 20px 5%;
+
+	.logo-container {
+	    display: flex;
+	    justify-content: flex-start;
+	    align-items: center;
+	    position: absolute;
+    	z-index: 1;
+
+		.logo {
+			width: 100px;
+			height: auto;
+			display: block;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+		}
+
+		.logo-name {
+
+			span {
+				color: #ffffff;
+			}
+		}
+
+		.boxIn {
+			opacity: 1;
+			-webkit-transform: translateY(0px);
+			-moz-transform: translateY(0px);
+			-ms-transform: translateY(0px);
+			-o-transform: translateY(0px);
+			transform: translateY(0px);
+		}
+
+		.boxOut {
+			opacity: 0;
+			-webkit-transform: translateY(-20px);
+			-moz-transform: translateY(-20px);
+			-ms-transform: translateY(-20px);
+			-o-transform: translateY(-20px);
+			transform: translateY(-20px);
+
+			-webkit-transition-delay: 500ms;
+			-moz-transition-delay: 500ms;
+			-ms-transition-delay: 500ms;
+			-o-transition-delay: 500ms;
+			transition-delay: 500ms;
+			
+		}
+
+	}
+
+	.nav-container {
+		width: 100%;
+	    display: flex;
+	    justify-content: flex-end;
+	    align-items: center;
+     	position: relative;
+
+		.menu {
+		    display: inline-block;
+
+		    ul {
+			    list-style-type: none;
+			    display: flex;
+
+			    li {
+				    padding: 20px 10px;
+
+				    a::after {
+					    display: inline-block;
+					    font-size: 80%;
+					    font-weight: bold;
+					    padding: 0 3px;
+					}
+
+					a:hover {
+				    	color: #ede232;
+				    }
+				}
+			}
+		}
+	}
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) { 
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) and (max-width: 767.98px) {  
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 991.98px) {  
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+
+ }
+
+
