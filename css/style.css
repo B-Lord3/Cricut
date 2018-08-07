@@ -228,7 +228,8 @@ body {
     .content .subscribe-section .subscribe-box .subscribe-content {
       position: relative;
       text-align: center;
-      padding: 10px; }
+      padding: 20px;
+      vertical-alignment: middle; }
       .content .subscribe-section .subscribe-box .subscribe-content .subscribe-header {
         width: 100%; }
         .content .subscribe-section .subscribe-box .subscribe-content .subscribe-header h1 {
