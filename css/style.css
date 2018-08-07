@@ -14,6 +14,12 @@ body {
     text-decoration: none; }
   body a:hover {
     text-decoration: none; }
+  body p {
+    color: #34495e;
+    line-height: 1.5;
+    font-weight: lighter; }
+  body section {
+    padding: 40px 0; }
 
 /*----- Wrapper -----*/
 #wrapper, #header {
@@ -160,9 +166,6 @@ body {
       .content .info-section .info-box-container .info-element .info-element-body {
         padding: 30px 20px; }
         .content .info-section .info-box-container .info-element .info-element-body .info-element-text p {
-          color: #34495e;
-          line-height: 1.5;
-          font-weight: lighter;
           text-align: center; }
         .content .info-section .info-box-container .info-element .info-element-body .info-btn {
           display: flex;
@@ -171,7 +174,7 @@ body {
           .content .info-section .info-box-container .info-element .info-element-body .info-btn a {
             color: #ab34c1;
             margin: 20px auto 10px;
-            padding: 10px 20px;
+            padding: 6px 20px;
             border: 1px solid #ab34c1;
             border-radius: .2em;
             overflow: hidden;
@@ -189,9 +192,9 @@ body {
               -o-transition: transform 300ms linear;
               transition: transform 300ms linear; }
             .content .info-section .info-box-container .info-element .info-element-body .info-btn a .activate-flash {
-              -ms-transform: rotate(35deg) translate(40px, -30px);
-              -webkit-transform: rotate(35deg) translate(40px, -30px);
-              transform: rotate(35deg) translate(40px, -30px); }
+              -ms-transform: rotate(35deg) translate(50px, -30px);
+              -webkit-transform: rotate(35deg) translate(50px, -30px);
+              transform: rotate(35deg) translate(50px, -30px); }
     .content .info-section .info-box-container .bg-1, .content .info-section .info-box-container .bg-2, .content .info-section .info-box-container .bg-3 {
       background-position: center;
       background-size: cover;
@@ -202,10 +205,80 @@ body {
       background-image: url(../img/dmitri-popov.jpg); }
     .content .info-section .info-box-container .bg-3 {
       background-image: url(../img/gem-lauris.jpg); }
+  .content .subscribe-section .layer-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    position: relative; }
+  .content .subscribe-section .bg-subscribe {
+    background-image: url(../img/jj-ying.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 0; }
+  .content .subscribe-section .subscribe-box-size {
+    display: flex;
+    width: 100%;
+    height: 200px; }
+  .content .subscribe-section .subscribe-box {
+    position: absolute;
+    height: auto;
+    top: 0; }
+    .content .subscribe-section .subscribe-box .subscribe-content {
+      position: relative;
+      text-align: center;
+      padding: 10px; }
+      .content .subscribe-section .subscribe-box .subscribe-content .subscribe-header {
+        width: 100%; }
+        .content .subscribe-section .subscribe-box .subscribe-content .subscribe-header h1 {
+          font-size: 3em;
+          color: #fff;
+          margin: 20px auto; }
+      .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body {
+        width: 100%; }
+        .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body p {
+          font-size: 14px;
+          color: #fff; }
+        .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body .subscribe-btn {
+          display: flex;
+          justify-content: center;
+          position: relative; }
+          .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body .subscribe-btn a {
+            color: #fff;
+            margin: 20px auto 10px;
+            padding: 6px 20px;
+            border: 1px solid #fff;
+            border-radius: .2em;
+            overflow: hidden;
+            position: relative; }
+            .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body .subscribe-btn a .flash {
+              width: 70px;
+              height: 150px;
+              position: absolute;
+              background-color: #ede232;
+              -ms-transform: rotate(35deg) translate(-140px, -50px);
+              -webkit-transform: rotate(35deg) translate(-140px, -50px);
+              transform: rotate(35deg) translate(-140px, -50px);
+              -webkit-transition: transform 300ms linear;
+              -moz-transition: transform 300ms linear;
+              -o-transition: transform 300ms linear;
+              transition: transform 300ms linear; }
+            .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body .subscribe-btn a .activate-flash {
+              -ms-transform: rotate(35deg) translate(70px, -50px);
+              -webkit-transform: rotate(35deg) translate(70px, -50px);
+              transform: rotate(35deg) translate(70px, -50px); }
+
+/*----- Footer -----*/
+footer {
+  border-top: 4px solid #9429bf; }
+  footer .social-icon i {
+    color: #9429bf;
+    margin: 0 15px; }
 
 @media (max-width: 575.98px) {
   .hero .hero-text {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
 
   .content .info-section .info-box-container {
     display: block; }
@@ -217,10 +290,10 @@ body {
     font-size: 2em; }
 
   .content .info-section .info-box-container {
-    display: flex; }
+    display: block; }
     .content .info-section .info-box-container .info-element {
-      width: calc(98% / 3);
-      margin: 20px calc(2% / 3); } }
+      width: 98%;
+      margin: 20px 1%; } }
 @media (min-width: 768px) and (max-width: 991.98px) {
   .hero .hero-text {
     font-size: 2.5em; }

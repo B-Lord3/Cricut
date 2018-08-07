@@ -34,7 +34,10 @@ $(document).ready(function(){
     $('.btn-3 a').mouseover(function(){
 		$('.btn-3 .flash').addClass('activate-flash');
     });
-    $('.info-btn a').mouseout(function(){
+    $('.btn-4 a').mouseover(function(){
+		$('.btn-4 .flash').addClass('activate-flash');
+    });
+    $('.btn').mouseout(function(){
         $('.flash').removeClass('activate-flash');
     });
 });
