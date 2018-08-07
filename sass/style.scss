@@ -37,14 +37,26 @@ body {
 	
 }
 
+.layer-overlay {
+	position: absolute;
+	background-image: linear-gradient(to top, #ab34c1, #9429bf, #7b20bd, #5d19ba, #3316b8);
+}
+
 .hero {
 	width: 100%;
 	height: 400px;
 	background-image: url(../img/ramiro-mendes.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
-     background-position: center;
+    background-position: center;
 	position: relative;
+
+
+	.layer-overlay {
+		width: 100%;
+		height: 400px;	
+		opacity: .5;
+	}
 
 	.hero-text {
 		display: flex;
@@ -81,13 +93,6 @@ body {
 	}
 }
 
-.layer-overlay {
-	width: 100%;
-	height: 400px;
-	position: absolute;
-	background-image: linear-gradient(to top, #ab34c1, #9429bf, #7b20bd, #5d19ba, #3316b8);
-	opacity: .5;
-}
 
 #header {
 	width: 100%;
@@ -134,11 +139,11 @@ body {
 
 		.boxOut {
 			opacity: 0;
-			-webkit-transform: translateY(-20px);
-			-moz-transform: translateY(-20px);
-			-ms-transform: translateY(-20px);
-			-o-transform: translateY(-20px);
-			transform: translateY(-20px);
+			-webkit-transform: translateY(-10px);
+			-moz-transform: translateY(-10px);
+			-ms-transform: translateY(-10px);
+			-o-transform: translateY(-10px);
+			transform: translateY(-10px);
 
 			-webkit-transition-delay: 500ms;
 			-moz-transition-delay: 500ms;
@@ -184,28 +189,216 @@ body {
 }
 
 
+
+/*----- Content -----*/
+.content {
+	min-height: 500px;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	padding: 40px 5%;
+
+
+	.info-section {
+
+		.info-box-container {
+			display: flex;
+			position: relative;
+
+			.info-element {
+				width: calc(96% / 3);
+				height: auto;
+				display: block;
+				position: relative;
+				margin: 20px calc(4% / 3);
+				border: 1px solid #bdc3c7;
+				border-radius: .2em;
+				box-shadow: 0px 0px 3px #9370db;
+				
+
+				.info-element-header {
+					width: 100%;
+					height: 150px;
+
+					.layer-overlay {
+						width: 100%;
+						height: 150px;
+						opacity: .5;
+					}
+				}
+
+				.info-element-body {
+					padding: 30px 20px;
+
+					.info-element-text {
+
+						p {
+							color: #34495e;
+							line-height: 1.5;
+							font-weight: lighter;
+							text-align: center;
+						}
+					}
+
+					.info-btn {
+						display: flex;
+						justify-content: center;
+						position: relative;
+
+						a {
+							color: #ab34c1;	
+							margin: 20px auto 10px;					
+							padding: 10px 20px;
+							border: 1px solid #ab34c1;
+							border-radius: .2em;
+							overflow: hidden;
+							position: relative;
+
+							.flash {
+								width: 70px;
+							    height: 100px;
+							    position: absolute;
+							    background-color: #ede232;
+							    -ms-transform: rotate(35deg) translate(-120px, -30px);
+							    -webkit-transform: rotate(35deg) translate(-120px, -30px);
+							    transform: rotate(35deg) translate(-120px, -30px);
+
+							    -webkit-transition: transform 300ms linear;
+  								-moz-transition: transform 300ms linear;
+  								-o-transition: transform 300ms linear;
+  								transition: transform 300ms linear;
+							}
+
+							.activate-flash {
+								-ms-transform: rotate(35deg) translate(40px, -30px);
+							    -webkit-transform: rotate(35deg) translate(40px, -30px);
+								transform: rotate(35deg) translate(40px, -30px);
+							}
+						}	
+					}
+				}
+			}
+
+			.bg-1, .bg-2, .bg-3 {
+    			background-position: center;
+    			background-size: cover;
+			    background-repeat: no-repeat;
+			}
+
+			.bg-1 {
+				background-image: url(../img/jj-ying.jpg);
+			}
+
+			.bg-2 {
+				background-image: url(../img/dmitri-popov.jpg);
+			}
+
+			.bg-3 {
+				background-image: url(../img/gem-lauris.jpg);
+			}
+
+		}
+	}
+
+
+}
+
+
 // Extra small devices (portrait phones, less than 576px)
 @media (max-width: 575.98px) { 
+	.hero {
+		.hero-text {
+		    font-size: 1.5em;
+		}
+	}
 
+	.content {
+
+		.info-section {
+
+			.info-box-container {
+				display: block;
+
+				.info-element {
+					width: 90%;
+					margin: 5%;
+				}
+			}
+		}
+	}
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) and (max-width: 767.98px) {  
+	.hero {
+		.hero-text {
+		    font-size: 2em;
+		}
+	}
+
+	.content {
+
+		.info-section {
+
+			.info-box-container {
+				display: flex;
+
+				.info-element {
+					width: calc(98% / 3);
+					margin: 20px calc(2% / 3);
+				}
+			}
+		}
+	}
 
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 991.98px) {  
+	.hero {
+		.hero-text {
+		    font-size: 2.5em;
+		}
+	}
+
+	.content {
+
+		.info-section {
+
+			.info-box-container {
+				display: flex;
+
+				.info-element {
+					width: calc(96% / 3);
+					margin: 20px calc(4% / 3);
+				}
+			}
+		}
+	}
 
 }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) and (max-width: 1199.98px) {  
-
-}
-
-// Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
+	.hero {
+		.hero-text {
+		    font-size: 3em;
+		}
+	}
+
+	.content {
+		.info-section {
+
+			.info-box-container {
+				display: flex;
+
+				.info-element {
+					width: calc(92% / 3);
+					margin: 20px calc(8% / 3);
+				}
+			}
+		}
+	}
 
  }
 

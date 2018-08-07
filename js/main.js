@@ -21,3 +21,20 @@ $(document).ready(function(){
 	}
 	
 });
+
+
+/*------------ Animate info button -----------*/
+$(document).ready(function(){
+	$('.btn-1 a').mouseover(function(){
+		$('.btn-1 .flash').addClass('activate-flash');
+    });
+    $('.btn-2 a').mouseover(function(){
+		$('.btn-2 .flash').addClass('activate-flash');
+    });
+    $('.btn-3 a').mouseover(function(){
+		$('.btn-3 .flash').addClass('activate-flash');
+    });
+    $('.info-btn a').mouseout(function(){
+        $('.flash').removeClass('activate-flash');
+    });
+});
