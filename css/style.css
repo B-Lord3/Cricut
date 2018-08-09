@@ -20,6 +20,8 @@ body {
     font-weight: lighter; }
   body section {
     padding: 40px 0; }
+  body .padding-0 {
+    padding: 0; }
 
 /*----- Wrapper -----*/
 #wrapper, #header {
@@ -142,8 +144,11 @@ body {
   min-height: 500px;
   width: 100%;
   height: auto;
-  margin: auto;
-  padding: 40px 5%; }
+  margin: auto; }
+  .content .content-padding {
+    padding: 40px 5%; }
+  .content div.btn {
+    cursor: inherit !important; }
   .content .info-section .info-box-container {
     display: flex;
     position: relative; }
@@ -165,8 +170,13 @@ body {
           opacity: .5; }
       .content .info-section .info-box-container .info-element .info-element-body {
         padding: 30px 20px; }
-        .content .info-section .info-box-container .info-element .info-element-body .info-element-text p {
+        .content .info-section .info-box-container .info-element .info-element-body .info-element-text {
           text-align: center; }
+          .content .info-section .info-box-container .info-element .info-element-body .info-element-text h2 {
+            color: #ab34c1;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 10px; }
         .content .info-section .info-box-container .info-element .info-element-body .info-btn {
           display: flex;
           justify-content: center;
@@ -205,6 +215,20 @@ body {
       background-image: url(../img/dmitri-popov.jpg); }
     .content .info-section .info-box-container .bg-3 {
       background-image: url(../img/gem-lauris.jpg); }
+  .content .cta .cta-element-container {
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/rawpixel.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+  .content .cta .layer-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: .5;
+    position: relative; }
   .content .subscribe-section .layer-overlay {
     width: 100%;
     height: 100%;
@@ -215,8 +239,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
-    padding: 0; }
+    position: relative; }
   .content .subscribe-section .subscribe-box-size {
     display: flex;
     width: 100%;
@@ -229,7 +252,7 @@ body {
       position: relative;
       text-align: center;
       padding: 20px;
-      vertical-alignment: middle; }
+      vertical-align: middle; }
       .content .subscribe-section .subscribe-box .subscribe-content .subscribe-header {
         width: 100%; }
         .content .subscribe-section .subscribe-box .subscribe-content .subscribe-header h1 {
@@ -244,10 +267,10 @@ body {
         .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body .subscribe-btn {
           display: flex;
           justify-content: center;
-          position: relative; }
+          position: relative;
+          margin: 20px auto 10px; }
           .content .subscribe-section .subscribe-box .subscribe-content .subscribe-body .subscribe-btn a {
             color: #fff;
-            margin: 20px auto 10px;
             padding: 6px 20px;
             border: 1px solid #fff;
             border-radius: .2em;
@@ -273,9 +296,11 @@ body {
 /*----- Footer -----*/
 footer {
   border-top: 4px solid #9429bf; }
-  footer .social-icon i {
+  footer .social-icon a {
     color: #9429bf;
     margin: 0 15px; }
+  footer .social-icon a:hover {
+    color: #000; }
 
 @media (max-width: 575.98px) {
   .hero .hero-text {
